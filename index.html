@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shravan Sharma portfolio</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+    <!--Navagation-->
+    <!-- <header>
+        <nav class="navbar">
+            <h2 class="logo">Shravan.</h2>
+            <ul class="nav-links">
+                <li>
+                    <a href="#home">Home</a>
+                    <li>
+                        <a href="#skills">Skills</a>
+                        <li>
+                            <a href="#projects">Projects</a>
+                            <li>
+                                <a href="#about">About</a>
+                                <li>
+                                    <a href="#contect">Content</a>
+                                </li>
+                            </li>
+                        </li>
+                    </li>
+                </li>
+                    
+            </ul>
+        </nav>
+    </header> -->
+    <nav>
+        <a href="#home">Home</a>
+         <a href="#skills">Skills</a>
+          <a href="#projects">Projects</a>
+           <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+    </nav>
+    <button id ="theme-btn"> Dark Mode</button>
+
+    <!-- Introduction -->
+     <section id="home" class="hero">
+        <div class="hero-content">
+            <p class="welcome">WELCOME TO MY PORTFOLIO</p>
+
+
+            <h1>Hi I am Shravan Sharma </span></h1>
+
+            <h2>Beginner Web Development</h2>
+
+            <p>
+                I am learning web development and builfing 
+                creating project 
+                using HTML, CSS and JavaScript.
+            </p>
+            
+            <a href="#projects" class="btn">View My Portfolio</a>
+
+        </div>
+     </section>
+
+     <!-- Skills -->
+      <section id="skills" class="section">
+        <h2>My Skills</h2>
+        <p>Technologied and tools I am learning.</p>
+
+        <div class="card-container">
+            <div class="card">HTML</div>
+            <div class="card">CSS</div>
+            <div class="card">JavaScript</div>
+            <div class="card">Python</div>
+            <div class="card">MS Word</div>
+            <div class="card">MS Excel</div>   
+        </div>
+      </section>
+      
+      <!--Project-->
+      <section id="project" class="section">
+        <h2>My Project</h2>
+        <p>Some project I have created while learning.</p>
+
+        <div class="card-container">
+            <div class="project-card">
+                <h3>Amazon Clone</h3>
+                <p>A beginner e-commerce website made with HTML and CSS.</p>
+            </div>
+            
+            <div class="project-card">
+                <h3>Personal Portifolio</h3>
+                <p>My Personal website to showcase my skills and project.</p>
+                <a href="#" class="project-btn">Live Demo</a>
+            </div>
+        </div>
+      </section> 
+
+      <!-- About Me -->
+       <section id="home" class="section-about">
+        <h2>About Me</h2>
+
+        <div class="intro">
+            <h1>Shravan Sharma</h1>
+            <h2>Beginner Web Developer</h2>  
+        <p>I am Shravan, a beginner web developer. 
+            I enjoy learning new technologies and creating websites.
+            My goal is to improve my coding skills and build useful project with modern web technologies.
+            <a href="#projects" class="btn">View My Projects</a>
+        </div>
+
+  
+        </p>
+       </section>
+
+       <!-- Contect-->
+        <!-- <section id="contect" class="section">
+            <h2>Contect Me</h2>
+            <p>
+              If you want to contect me, feel free to send me an email.
+            </p>
+            <a href="mailto:your-email@example.com" class="contect-btn">Email Me</a>
+        </section> -->
+        <section id="contact">
+            <h2>Contact Me</h2>
+
+            <from id="contact-form">
+                <input type="text" id="name" placeholder="Enter your name">
+
+                <input type="email" id="email" placeholder="Enter your email">
+
+                <textarea id="massage" placeholder="Write your masseage"></textarea>
+                <button type="submit">Send Masseage</button>
+
+                <p id="form-status"></p>
+            </from>
+        </section>
+
+        <!-- Footer -->
+         <a href="#home" class="top-btn"> Back to Top</a>
+         <footer>
+            <p> 2026 Shravan | My Portifolio</p>
+            <p>Made with using HTML, CSS & JavaScript</p>
+         </footer>
+         <script src="script.js"></script>
+         <script>
+    const themBtn = 
+    document.getElementById("them-btn");
+
+    if (localStorage.getItem("theme") === "dark") {
+
+        document.body.classList.add("dark-mode");
+        themBtn.textContent = " Light Mode";
+    }
+
+    themeBtn.onclick = function () {
+
+        document.body.classList.toggle("dark-mode");
+
+        if 
+        (document.body.classList.contains("dark-mode"))
+        {
+            themeBtn.textContent = "Light Mode";
+            localStorage.setItem("theme","light");
+        } else {
+            themBtn.textContent = "Dark-Mode";
+            locatStorage.setItem("theme","light");
+        }
+    };
+    </script>
+
+    <script>
+        const contactForm = 
+        document.getElementById("contact-form");
+        const statusMassage =
+        document.getElementById("form-status");
+
+        contactForm.addEventListener("submit",function (event) {
+            event.preventDefault();
+
+            const name = 
+            document.getElementById("name").value.trim();
+
+            const email =
+            document.getElementById("email").value.trim();
+
+            const massage =
+            document.getElemenById("massage").value.trim();
+
+            if (name === ""  || email === "" || massage === "") {
+                statusMassage.textContent = 
+                 "Please fill in all fields.";
+                statusMassage.style.color = 
+                "red"
+            }else {
+                statusMassage.textContent = 
+                "Form validated successfully!";
+                statusMassage.style.color = 
+            "green";
+            }
+        });
+    </script>
+   
+</body>
+</html>
